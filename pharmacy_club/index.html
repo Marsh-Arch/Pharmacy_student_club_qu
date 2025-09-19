@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pharmacy Club</title>
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <!-- Hero section with club motto -->
+  <header class="hero">
+    <h1 data-i18n="heroTitle">Pharmacy Club</h1>
+    <p data-i18n="heroMotto">“The palm: identity and continuous giving. The pill: serving health and community. The book: science, knowledge, and academic excellence.”</p>
+  </header>
+
+  <!-- Navigation bar with language selector -->
+  <nav>
+    <div class="nav-links">
+      <a href="#about" data-i18n="navAbout">About</a>
+      <a href="#events" data-i18n="navEvents">Events</a>
+      <a href="#news" data-i18n="navNews">News</a>
+      <a href="#gallery" data-i18n="navGallery">Gallery</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+    </div>
+    <div class="lang-selector" aria-label="Language selector">
+      <button type="button" data-lang="en" class="active">EN</button>
+      <button type="button" data-lang="ar">عربى</button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- About section -->
+    <section id="about" aria-label="About the Pharmacy Club">
+      <div class="section-content">
+        <h2 data-i18n="aboutHeading">About the Pharmacy Club</h2>
+        <p data-i18n="aboutParagraph1">
+          Participation in professional student organizations enriches the
+          pharmacy experience and helps members explore different career paths while
+          sharpening their leadership and communication skills. As part of the
+          college, the club offers opportunities to engage with peers and
+          professionals, share knowledge about clinical pharmacy, and promote
+          excellence in patient care, research and education. Members are encouraged
+          to develop the interdisciplinary skills needed to thrive in diverse health
+          care settings.
+        </p>
+        <p data-i18n="aboutParagraph2">
+          Through hands‑on workshops, community service and health outreach,
+          participants refine their clinical and communication abilities, deepen
+          their understanding of patient‑centred care and prepare to improve public
+          health. These experiences embody the club’s motto by emphasising
+          identity and continuous giving, serving health and community and the
+          pursuit of science and knowledge.
+        </p>
+      </div>
+    </section>
+
+    <!-- Events section -->
+    <section id="events" aria-label="Upcoming events">
+      <div class="section-content">
+        <h2 data-i18n="eventsHeading">Upcoming Events</h2>
+        <div id="events-list" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- News section -->
+    <section id="news" aria-label="Latest news">
+      <div class="section-content">
+        <h2 data-i18n="newsHeading">Latest News</h2>
+        <div id="news-list" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Gallery section -->
+    <section id="gallery" aria-label="Photo gallery">
+      <div class="section-content">
+        <h2 data-i18n="galleryHeading">Gallery</h2>
+      </div>
+      <div class="gallery">
+        <img src="assets/hero-bg.png" alt="Abstract pharmacy graphic featuring capsules and leaves" class="active" />
+        <img src="assets/about-bg.png" alt="Abstract graphic symbolising health and science" />
+        <img src="assets/contact-bg.png" alt="Abstract background with mortar and pestle icons" />
+        <div class="gallery-controls">
+          <button id="prev" aria-label="Previous image">&#10094;</button>
+          <button id="next" aria-label="Next image">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" aria-label="Contact form">
+      <div class="section-content">
+        <h2 data-i18n="contactHeading">Contact Us</h2>
+        <form id="contact-form">
+          <label for="name" data-i18n="contactName">Name</label>
+          <input type="text" id="name" name="name" data-placeholder-i18n="contactPlaceholderName" placeholder="Your name" required />
+
+          <label for="email" data-i18n="contactEmail">Email</label>
+          <input type="email" id="email" name="email" data-placeholder-i18n="contactPlaceholderEmail" placeholder="your@email.com" required />
+
+          <label for="message" data-i18n="contactMessage">Message</label>
+          <textarea id="message" name="message" rows="5" data-placeholder-i18n="contactPlaceholderMessage" placeholder="How can we help?" required></textarea>
+
+          <button type="submit" data-i18n="contactSubmit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back to top button -->
+  <button id="backToTop" aria-label="Back to top">&#8679;</button>
+
+  <!-- Footer -->
+  <footer style="text-align:center;padding:20px;background-color:var(--primary);color:var(--light);">
+    &copy; 2025 Pharmacy Club – All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/script.js"></script>
+</body>
+</html>
